@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("isJumping", true);
         }
 
         if(!paused)
@@ -32,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", 0);
         }
+    }
+
+    public void OnLanding ()
+    {
+        animator.SetBool("isJumping", false);
     }
     void FixedUpdate()
     {
