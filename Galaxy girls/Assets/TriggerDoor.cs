@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class door : MonoBehaviour
+public class TriggerDoor : MonoBehaviour
 {
     [SerializeField] private Image customImage;
     public Animator anim;
