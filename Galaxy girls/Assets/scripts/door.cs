@@ -17,7 +17,7 @@ public class door : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             customImage.enabled = true;
-            if (Input.GetButtonDown("Enter"))
+            if (Input.GetKey(KeyCode.Return))
             {
                 StartCoroutine("Leave");
             }
@@ -29,7 +29,7 @@ public class door : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             customImage.enabled = true;
-            if (Input.GetButtonDown("Enter"))
+            if (Input.GetKey(KeyCode.Return))
             {
                 StartCoroutine("Leave");
             }

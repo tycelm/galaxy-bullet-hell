@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class TriggerDoor : MonoBehaviour
 {
-    [SerializeField] private Image customImage;
     public Animator anim;
     public Image blac;
     public int scene;
@@ -16,11 +15,7 @@ public class TriggerDoor : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            customImage.enabled = true;
-            if (Input.GetButtonDown("Enter"))
-            {
-                StartCoroutine("Leave");
-            }
+            StartCoroutine("Leave");
         }
     }
 
@@ -28,19 +23,7 @@ public class TriggerDoor : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            customImage.enabled = true;
-            if (Input.GetButtonDown("Enter"))
-            {
-                StartCoroutine("Leave");
-            }
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.CompareTag("Player"))
-        {
-            customImage.enabled = false;
+            StartCoroutine("Leave");
         }
     }
 

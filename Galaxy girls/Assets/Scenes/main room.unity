@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 129624184}
   - component: {fileID: 129624183}
   - component: {fileID: 129624185}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: extra door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2516837, y: 2.3622496}
+  m_Offset: {x: 0.27984732, y: 2.0761788}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -193,7 +193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.089755, y: 6.1710935}
+  m_Size: {x: 3.0266929, y: 2.8358998}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -725,7 +725,7 @@ PrefabInstance:
     - target: {fileID: 4646501142026345617, guid: f949225514aa1cf4e90ccee498c94993,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.198
+      value: 2.11
       objectReference: {fileID: 0}
     - target: {fileID: 4646501142026345617, guid: f949225514aa1cf4e90ccee498c94993,
         type: 3}
@@ -897,6 +897,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5402390202828094956, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 90.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402390202828094956, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402390202828094956, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 176.62595
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402390202828094956, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40.02533
+      objectReference: {fileID: 0}
     - target: {fileID: 7144568483490638589, guid: 1b43b0b354db76846bb6dd02dc0addbc,
         type: 3}
       propertyPath: m_Sprite
@@ -952,6 +972,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 423.30643
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824308273966650734, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.103027
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824308273966650734, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.322998
       objectReference: {fileID: 0}
     - target: {fileID: 9054658024404732593, guid: 1b43b0b354db76846bb6dd02dc0addbc,
         type: 3}
