@@ -10,12 +10,14 @@ public class door : MonoBehaviour
     public Animator anim;
     public Image blac;
     public int scene;
+    public GameObject open;
 
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
+            open.SetActive(true);
             customImage.enabled = true;
             if (Input.GetKey(KeyCode.Return))
             {
@@ -28,10 +30,11 @@ public class door : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            open.SetActive(true);
             customImage.enabled = true;
             if (Input.GetKey(KeyCode.Return))
             {
-                StartCoroutine("Leave");
+                StartCoroutine("Leave");    
             }
         }
     }
@@ -40,6 +43,7 @@ public class door : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            open.SetActive(false);
             customImage.enabled = false;
         }
     }

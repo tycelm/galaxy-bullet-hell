@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: boss
+    uniqueID: 2816315663
+    locked: 0
+  - name: foreground
+    uniqueID: 130045975
+    locked: 0
   - name: Player
     uniqueID: 2726061883
     locked: 0
