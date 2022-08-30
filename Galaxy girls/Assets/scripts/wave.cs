@@ -6,9 +6,11 @@ public class wave : MonoBehaviour
 {
     public GameObject left;
     public GameObject right;
+    public GameObject original;
+    public GameObject drop;
     private float sec = 0.5f;
 
-    void Start()
+    void OnEnable()
     {
         StartCoroutine("Leave");
     }
@@ -23,6 +25,8 @@ public class wave : MonoBehaviour
     IEnumerator Leave()
     {
         yield return new WaitForSeconds(sec);
+        original.SetActive(false);
+        drop.SetActive(true);
         gameObject.SetActive(false);
     }
 }
