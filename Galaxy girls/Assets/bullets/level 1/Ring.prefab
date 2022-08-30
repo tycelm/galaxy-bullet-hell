@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1815110413626068542}
   m_Layer: 0
   m_Name: Ring
-  m_TagString: Untagged
+  m_TagString: hurty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 5
+  posx: 0
+  posy: 0
+  posz: 0
 --- !u!1 &1815110413905526899
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +165,7 @@ GameObject:
   - component: {fileID: 1815110413905526901}
   m_Layer: 0
   m_Name: Ring Front
-  m_TagString: Untagged
+  m_TagString: hurty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
