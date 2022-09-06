@@ -18,7 +18,6 @@ public class CommetController : MonoBehaviour
     {
         if (col.CompareTag("floor"))
         {
-            Debug.Log("felt it");
             wave.SetActive(true);
             gameObject.SetActive(false);
         }
@@ -28,7 +27,6 @@ public class CommetController : MonoBehaviour
     {
         if (col.CompareTag("floor"))
         {
-            Debug.Log("felt it");
             wave.SetActive(true);
             gameObject.SetActive(false);
         }
