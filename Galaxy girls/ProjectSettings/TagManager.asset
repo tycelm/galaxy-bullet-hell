@@ -6,6 +6,7 @@ TagManager:
   tags:
   - floor
   - hurty
+  - bouncedry
   layers:
   - Default
   - TransparentFX
