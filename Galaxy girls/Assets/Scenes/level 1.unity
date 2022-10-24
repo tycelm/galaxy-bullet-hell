@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   scene: 0
+  animator: {fileID: 776804450}
 --- !u!61 &191583298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -810,6 +811,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f949225514aa1cf4e90ccee498c94993, type: 3}
+--- !u!95 &776804450 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4646501142026345704, guid: f949225514aa1cf4e90ccee498c94993,
+    type: 3}
+  m_PrefabInstance: {fileID: 709825535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &790948957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1815110413626068540, guid: 5648964a51dfa474585d0beec973291d,
@@ -1207,7 +1214,7 @@ PrefabInstance:
     - target: {fileID: 3652744857759869047, guid: 3e32c71623dc5ee4ebe495ad3fc34c3c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3652744857759869047, guid: 3e32c71623dc5ee4ebe495ad3fc34c3c,
         type: 3}
@@ -2784,6 +2791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: hurty
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652744857759869047, guid: 3e32c71623dc5ee4ebe495ad3fc34c3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3652744857798240478, guid: 3e32c71623dc5ee4ebe495ad3fc34c3c,
         type: 3}

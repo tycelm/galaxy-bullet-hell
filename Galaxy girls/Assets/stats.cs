@@ -8,6 +8,7 @@ public class stats : MonoBehaviour
     public int lives = 3;
     public int scene;
     private bool grace;
+    public Animator animator;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -15,8 +16,7 @@ public class stats : MonoBehaviour
         {
             if (!grace)
             {
-                Debug.Log("Owie!");
-                Debug.Log(lives);
+                animator.SetBool("hurt", true);
                 lives -= 1;
                 if (lives == 0)
                 {
@@ -24,9 +24,16 @@ public class stats : MonoBehaviour
                     SceneManager.LoadScene(scene);
                 }
                 grace = true;
+                StartCoroutine("cancelAnim");
                 StartCoroutine("Grace");
             }
         }
+    }
+
+    IEnumerator cancelAnim()
+    {
+        yield return new WaitForSeconds(0.01f);
+        animator.SetBool("hurt", false);
     }
 
     IEnumerator Grace()
