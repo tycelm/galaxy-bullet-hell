@@ -25,8 +25,7 @@ public class wave : MonoBehaviour
     IEnumerator Leave()
     {
         yield return new WaitForSeconds(sec);
-        original.SetActive(false);
-        drop.SetActive(true);
+        Debug.Log("raeched");
         gameObject.SetActive(false);
     }
 }
