@@ -11,7 +11,7 @@ public class wave : MonoBehaviour
     public float posz;
     private float sec = 0.4f;
 
-    void OnEnable()
+        void OnEnable()
     {
         left.transform.position = new Vector3(posx, posy, posz);
         right.transform.position = new Vector3(posx, posy, posz);
@@ -21,14 +21,13 @@ public class wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        left.transform.Translate(Vector3.left * 20 * Time.deltaTime);
-        right.transform.Translate(Vector3.right * 20 * Time.deltaTime);
+        left.transform.Translate(Vector3.left * 15 * Time.deltaTime);
+        right.transform.Translate(Vector3.right * 12 * Time.deltaTime);
     }
 
     IEnumerator Leave()
     {
         yield return new WaitForSeconds(sec);
-        Debug.Log("raeched");
         gameObject.SetActive(false);
     }
 }
