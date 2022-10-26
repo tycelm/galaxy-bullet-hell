@@ -13,7 +13,7 @@ public class SpeakerUI : MonoBehaviour
        get {return speaker;}
        set{
            speaker = value;
-           portrait.sprite = speaker.portrait;
+           //portrait.sprite = speaker.portrait;
        }
    }
 

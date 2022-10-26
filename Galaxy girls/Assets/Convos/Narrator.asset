@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b414e11412d67bd4a88140bbdd86e0b9, type: 3}
   m_Name: Narrator
   m_EditorClassIdentifier: 
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: fa26695695bf4a0439f3c55dab51e6c0, type: 3}

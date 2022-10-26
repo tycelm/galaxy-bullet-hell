@@ -42,7 +42,7 @@ public class DialogueDisplay : MonoBehaviour
         }
         else
         {
-            activeLineIndex = conversation.lines.Length;
+            activeLineIndex = 0;
             speakerUILeft.Hide();
             speakerUIRight.Hide();
             nextTextless.SetActive(true);
