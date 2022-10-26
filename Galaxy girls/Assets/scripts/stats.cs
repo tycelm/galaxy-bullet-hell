@@ -9,6 +9,7 @@ public class stats : MonoBehaviour
     public int scene;
     private bool grace;
     public Animator animator;
+    public Animator cam;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -17,6 +18,7 @@ public class stats : MonoBehaviour
             if (!grace)
             {
                 animator.SetBool("hurt", true);
+                StartCoroutine("Shake");
                 lives -= 1;
                 if (lives == 0)
                 {
@@ -40,5 +42,12 @@ public class stats : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         grace = false;
+    }
+
+    IEnumerator Shake()
+    {
+        cam.SetBool("Shake", true);
+        yield return new WaitForSeconds(0.1f);
+        cam.SetBool("Shake", false);
     }
 }

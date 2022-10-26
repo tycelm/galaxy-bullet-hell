@@ -5,20 +5,28 @@ using UnityEngine;
 
 public class TextlessSlide : MonoBehaviour
 {
-    public DialogueDisplay DialogMsg;
     [SerializeField] private Image me;
-    [SerializeField] private Image next;
+    public GameObject next;
+    public Animator anim;
+    public bool shake = false;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (DialogMsg != null)
-            {
-                DialogMsg.enabled = true;
-            }
-            next.enabled = true;
+            next.SetActive(true);
             me.enabled = false;
+            if (shake)
+            {
+                StartCoroutine("Shake");
+            }
         }
+    }
+
+    IEnumerator Shake()
+    {
+        anim.SetBool("Shake", true);
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("Shake", false);
     }
 }

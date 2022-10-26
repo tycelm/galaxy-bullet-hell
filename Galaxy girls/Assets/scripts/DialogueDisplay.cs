@@ -9,6 +9,7 @@ public class DialogueDisplay : MonoBehaviour
     public GameObject speakerLeft;
     public GameObject speakerRight;
     public GameObject nextTextless;
+    public float sec;
     private SpeakerUI speakerUILeft;
     private SpeakerUI speakerUIRight;
 
@@ -21,11 +22,12 @@ public class DialogueDisplay : MonoBehaviour
         
         speakerUILeft.Speaker = conversation.speakerLeft;
         speakerUIRight.Speaker = conversation.speakerRight;
+        AdvanceConversation();
     }
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
             AdvanceConversation();
         }
@@ -40,7 +42,7 @@ public class DialogueDisplay : MonoBehaviour
         }
         else
         {
-
+            activeLineIndex = conversation.lines.Length;
             speakerUILeft.Hide();
             speakerUIRight.Hide();
             nextTextless.SetActive(true);
@@ -76,7 +78,7 @@ public class DialogueDisplay : MonoBehaviour
                 foreach (char letter in sentence.ToCharArray())
                 {
                     activeSpeakerUI.Dialog += letter;
-                    yield return null;
+                    yield return new WaitForSeconds(sec);
                 }
             }
         }
