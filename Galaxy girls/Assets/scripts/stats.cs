@@ -23,12 +23,33 @@ public class stats : MonoBehaviour
                 if (lives == 0)
                 {
                     // to be fully implemented ltr
+
+                    // used to increase attempt count
+                    updateAttempts();
                     SceneManager.LoadScene(scene);
                 }
                 grace = true;
                 StartCoroutine("cancelAnim");
                 StartCoroutine("Grace");
             }
+        }
+    }
+
+    public static void updateAttempts()
+    {
+        PlayerData me = SaveSystem.LoadPlayer();
+
+        int current = SceneManager.GetActiveScene().buildIndex;
+
+        // other scenes unknown so i only got level 1
+        if (current == 3)
+        {
+            me.one += 1;
+            SaveSystem.SavePlayer(me);
+        }
+        else
+        {
+            Debug.LogError("imagine not being able to count");
         }
     }
 

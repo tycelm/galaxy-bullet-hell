@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -269,6 +269,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b3da6c398939c534caf005ae10298a09,
         type: 3}
+    - target: {fileID: 8824308273966650734, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.103027
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824308273966650734, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.322998
+      objectReference: {fileID: 0}
     - target: {fileID: 9054658024404732593, guid: 1b43b0b354db76846bb6dd02dc0addbc,
         type: 3}
       propertyPath: m_Name
@@ -378,6 +388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054658024404759884, guid: 1b43b0b354db76846bb6dd02dc0addbc,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b43b0b354db76846bb6dd02dc0addbc, type: 3}
