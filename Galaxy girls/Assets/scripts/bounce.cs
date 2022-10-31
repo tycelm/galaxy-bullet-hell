@@ -11,6 +11,7 @@ public class bounce : MonoBehaviour
     public float posy;
     public float posz;
     public int jump;
+    private int count;
 
     void OnEnable()
     {
