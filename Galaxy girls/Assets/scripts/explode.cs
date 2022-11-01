@@ -12,15 +12,13 @@ public class explode : MonoBehaviour
     public GameObject f;
     public GameObject g;
     public GameObject h;
-    public float posx;
-    public float posy;
-    public float posz;
+    public GameObject origin;
     public float speed;
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        Vector3 pos = new Vector3(posx, posy, posz);
+        Vector3 pos = origin.transform.position;
         a.transform.position = b.transform.position = c.transform.position = d.transform.position =
             e.transform.position = f.transform.position = g.transform.position = h.transform.position = pos;
     }
