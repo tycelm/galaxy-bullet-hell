@@ -8,6 +8,7 @@ public class PlayerData
     public int one;
     public int two;
     public int three;
+    public bool gooseworx;
 
     public PlayerData(int one, int two, int three)
     {
@@ -17,5 +18,11 @@ public class PlayerData
         this.three = three;
 
         // possibly completion rate
+    }
+
+    public bool ToggleGooseworx(bool gooseworx)
+    {
+        this.gooseworx = gooseworx;
+        return gooseworx;
     }
 }

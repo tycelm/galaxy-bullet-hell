@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,31 @@ public class stats : MonoBehaviour
     private bool grace;
     public Animator animator;
     public Animator cam;
+    public GameObject modeDisplay;
+    public TextMeshProUGUI dialog;
+    private PlayerData me;
+    private int current;
+    private bool gooseworx;
+
+    void Start()
+    {
+        modeDisplay.SetActive(false);
+        me = SaveSystem.LoadPlayer();
+        current = SceneManager.GetActiveScene().buildIndex;
+        gooseworx = me.gooseworx;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            gooseworx = me.ToggleGooseworx(!gooseworx);
+            SaveSystem.SavePlayer(me);
+            dialog.text = $"Gooseworx mode: {gooseworx}";
+            modeDisplay.SetActive(true);
+            StartCoroutine("Toggle");
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -19,7 +45,10 @@ public class stats : MonoBehaviour
             {
                 animator.SetBool("hurt", true);
                 StartCoroutine("Shake");
-                lives -= 1;
+                if (!gooseworx)
+                {
+                    lives -= 1;
+                }
                 if (lives == 0)
                 {
                     // to be fully implemented ltr
@@ -35,11 +64,8 @@ public class stats : MonoBehaviour
         }
     }
 
-    public static void updateAttempts()
+    public void updateAttempts()
     {
-        PlayerData me = SaveSystem.LoadPlayer();
-
-        int current = SceneManager.GetActiveScene().buildIndex;
 
         // other scenes unknown so i only got level 1
         if (current == 3)
@@ -70,5 +96,11 @@ public class stats : MonoBehaviour
         cam.SetBool("Shake", true);
         yield return new WaitForSeconds(0.1f);
         cam.SetBool("Shake", false);
+    }
+
+    IEnumerator Toggle()
+    {
+        yield return new WaitForSeconds(2);
+        modeDisplay.SetActive(false);
     }
 }
