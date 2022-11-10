@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class stats : MonoBehaviour
 {
     public int lives = 3;
-    public int scene;
+    public GameObject Over;
     private bool grace;
+    public Animator life;
     public Animator animator;
     public Animator cam;
     public GameObject modeDisplay;
@@ -23,6 +24,7 @@ public class stats : MonoBehaviour
         me = SaveSystem.LoadPlayer();
         current = SceneManager.GetActiveScene().buildIndex;
         gooseworx = me.gooseworx;
+        life.SetBool("god", gooseworx);
     }
 
     void Update()
@@ -33,6 +35,7 @@ public class stats : MonoBehaviour
             SaveSystem.SavePlayer(me);
             dialog.text = $"Gooseworx mode: {gooseworx}";
             modeDisplay.SetActive(true);
+            life.SetBool("god", gooseworx);
             StartCoroutine("Toggle");
         }
     }
@@ -48,6 +51,11 @@ public class stats : MonoBehaviour
                 if (!gooseworx)
                 {
                     lives -= 1;
+                    life.SetInteger("Life",lives);
+                }
+                else
+                {
+                    life.SetTrigger("hurt");
                 }
                 if (lives == 0)
                 {
@@ -55,7 +63,7 @@ public class stats : MonoBehaviour
 
                     // used to increase attempt count
                     updateAttempts();
-                    SceneManager.LoadScene(scene);
+                    Over.SetActive(true);
                 }
                 grace = true;
                 StartCoroutine("cancelAnim");
