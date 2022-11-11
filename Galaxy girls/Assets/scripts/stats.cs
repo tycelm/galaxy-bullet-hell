@@ -60,10 +60,11 @@ public class stats : MonoBehaviour
                 if (lives == 0)
                 {
                     // to be fully implemented ltr
+                    // play anim then removes player from scene
 
                     // used to increase attempt count
                     updateAttempts();
-                    Over.SetActive(true);
+                    Over.SetActive(true); // delay this when i have the anim
                 }
                 grace = true;
                 StartCoroutine("cancelAnim");
