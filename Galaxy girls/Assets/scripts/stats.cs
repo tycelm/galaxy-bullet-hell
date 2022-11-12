@@ -14,6 +14,7 @@ public class stats : MonoBehaviour
     public Animator cam;
     public GameObject modeDisplay;
     public TextMeshProUGUI dialog;
+    public AudioLowPassFilter sound;
     private PlayerData me;
     private int current;
     private bool gooseworx;
@@ -46,6 +47,7 @@ public class stats : MonoBehaviour
         {
             if (!grace)
             {
+                sound.enabled = true;
                 animator.SetBool("hurt", true);
                 StartCoroutine("Shake");
                 if (!gooseworx)
@@ -67,7 +69,6 @@ public class stats : MonoBehaviour
                     Over.SetActive(true); // delay this when i have the anim
                 }
                 grace = true;
-                StartCoroutine("cancelAnim");
                 StartCoroutine("Grace");
             }
         }
@@ -88,15 +89,10 @@ public class stats : MonoBehaviour
         }
     }
 
-    IEnumerator cancelAnim()
-    {
-        yield return new WaitForSeconds(0.01f);
-        animator.SetBool("hurt", false);
-    }
-
     IEnumerator Grace()
     {
         yield return new WaitForSeconds(2);
+        sound.enabled = false;
         grace = false;
     }
 
@@ -105,6 +101,7 @@ public class stats : MonoBehaviour
         cam.SetBool("Shake", true);
         yield return new WaitForSeconds(0.1f);
         cam.SetBool("Shake", false);
+        animator.SetBool("hurt", false);
     }
 
     IEnumerator Toggle()
