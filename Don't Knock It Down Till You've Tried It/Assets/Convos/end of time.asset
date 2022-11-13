@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e0c08b7dc1ca34995c36b9d1251d8e, type: 3}
+  m_Name: end of time
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: 0f80f9eb01b32384f8e310881a404773, type: 2}
+  speakerRight: {fileID: 11400000, guid: 0f80f9eb01b32384f8e310881a404773, type: 2}
+  lines:
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: erm....
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: this is awkward
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: you reached the end of all of the content I have so far
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: But that doesnt mean this game is finished! I'm still working on it as
+      we speak
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: feel free to msg or tag me on social media if you have feedback, especially
+      if you beat this game the normal way
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: not even i can do that
+  - character: {fileID: 0}
+    portrait: {fileID: 0}
+    text: but most of all, i just want to say.....
